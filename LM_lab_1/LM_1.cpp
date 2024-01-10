@@ -8,13 +8,13 @@ using namespace std;
 
 // file name: firstprog.cpp
 //  This is the first program that just writes out a simple message
-int main()
-{
-    cout << "Now is the time for all good men" << endl;
-    cout << "To come to the aid of their party" << endl;
+// int main()
+// {
+//     cout << "Now is the time for all good men" << endl;
+//     cout << "To come to the aid of their party" << endl;
 
-    return 0;
-}
+//     return 0;
+// }
 
 // ================================================================
 
@@ -22,7 +22,7 @@ int main()
 // This program takes two values from the user and then swaps them
 // before printing the values. The user will be prompted to enter
 // both numbers.
-/*
+
 int main()
 {
     float firstNumber;
@@ -48,7 +48,7 @@ int main()
          << firstNumber << " and " << secondNumber << endl;
     return 0;
 }
-*/
+
 // ===================================================
 
 // file name: runprob.cpp
