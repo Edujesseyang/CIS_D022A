@@ -2,5 +2,6 @@
     "files.associations": {
         "iostream": "cpp"
     },
-    "cmake.options.statusBarVisibility": "visible"
+    "cmake.options.statusBarVisibility": "visible",
+    "cloudcode.duetAI.inlineSuggestions.enableAuto": false
 }
