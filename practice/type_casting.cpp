@@ -1,13 +1,12 @@
 #include <iostream>
-#include <string>
 using namespace std;
 int main()
 {
-    string a;
-
-    a = cin.get();
+    char a = 'a';
+    int i = (int)a;
 
     cout << a << endl;
+    cout << i << endl;
 
     return 0;
 }
