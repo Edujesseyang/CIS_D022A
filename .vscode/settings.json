@@ -3,5 +3,6 @@
         "iostream": "cpp"
     },
     "cmake.options.statusBarVisibility": "visible",
-    "cloudcode.duetAI.inlineSuggestions.enableAuto": false
+    "cloudcode.duetAI.inlineSuggestions.enableAuto": false,
+    "C_Cpp.errorSquiggles": "disabled"
 }
