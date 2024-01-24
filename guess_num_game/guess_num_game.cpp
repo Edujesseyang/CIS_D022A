@@ -43,6 +43,7 @@ int main()
         cout << "The right answer is: " << target_num << endl;
     }
 
+    cin.get();
     return 0;
 }
 
@@ -51,6 +52,7 @@ int get_input()
     int num;
     cout << "Guess a number between 0 to 100: ";
     cin >> num;
+    cin.get();
     return num;
 }
 
