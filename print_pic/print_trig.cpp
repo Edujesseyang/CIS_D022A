@@ -113,4 +113,5 @@ void print_prime_trig(int height, int base, char chart)
 void print_border_trig(int height, int base, char chart)
 {
     int half = height;
+    // FIXME;
 }
