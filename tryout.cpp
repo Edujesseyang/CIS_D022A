@@ -1,17 +1,19 @@
 #include <iostream>
-#include <string>
 
-using namespace std;
+float c_to_f(float c);
 
 int main()
 {
-  int i = 10;
+  float c_degree;
+  std::cout << "Enter the degree in Celsius: \n";
+  std::cin >> c_degree;
 
-  while (i < 3)
-  {
-    cout << i << endl;
-    i++;
-  }
-
+  float f_degree = c_to_f(c_degree);
+  std::cout << c_degree << " C = " << f_degree << " F. \n";
   return 0;
+}
+
+float c_to_f(float c)
+{
+  return c * 9 / 5 + 32;
 }
