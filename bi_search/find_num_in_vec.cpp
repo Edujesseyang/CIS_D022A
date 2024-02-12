@@ -87,9 +87,9 @@ std::vector<int> get_vector(int start_num, int size)
     // output: vector<int>
 
     std::vector<int> num_vec;
-    for (int i = 1; i <= size; i++)
+    for (int i = start_num; i <= size; i++)
     {
-        num_vec.push_back(i + start_num);
+        num_vec.push_back(i);
     }
 
     return num_vec;
