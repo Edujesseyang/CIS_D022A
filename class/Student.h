@@ -14,12 +14,12 @@ private:
 
 public:
     Student();
-    Student(std::string first_name, std::string last_name, int id, float grade);
+    Student(const std::string& first_name, const std::string& last_name, int id, float grade);
 
-    float get_grade();
-    std::string get_name();
-    int get_id();
-    void print();
+    float get_grade() const;
+    std::string get_name() const;
+    int get_id() const;
+    void print() const;
     void change_grade(float new_grade);
 };
 
