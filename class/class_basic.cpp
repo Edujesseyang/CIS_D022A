@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <iomanip>
 
 // include the header file in the dir
 #include "C:\\Users\\jcjcr\\OneDrive\\desktop\\code\\CIS_D022A\\class\\Student.h"
@@ -24,7 +26,7 @@ float Student::get_grade() const
 
 std::string Student::get_name() const
 {
-    return m_first_name + m_last_name;
+    return m_first_name + ' ' + m_last_name;
 }
 
 int Student::get_id() const
@@ -45,6 +47,8 @@ void Student::change_grade(float new_grade)
 {
     m_grade = new_grade;
 }
+
+
 
 // **********************
 //     Class Course
@@ -88,7 +92,7 @@ public:
         std::cout << "\tClass limit: \t" << m_limit << '\n';
         std::cout << "\tCredit:      \t" << m_credit << '\n';
     }
-    void Course::change_name(std::string new_name)
+    void change_name(std::string new_name)
     {
         m_name = new_name;
     }
@@ -98,10 +102,30 @@ public:
     }
     void print_student_list()
     {
-        for (size_t i = 0; i < m_student.size(); i++)
+        std::cout << m_name << " Student list: \n";
+        for (const auto &student : m_student)
         {
-            std::cout << "Student list: \n";
-            std::cout << '\t' << m_student[i] << '\n';
+            std::cout << '\t';
+            std::cout << std::setw(15) << std::left << student.get_name();
+            std::cout << "(" << std::setw(6) << std::left << student.get_id() << ")";
+            std::cout << "\t\t\t\t\t";
+            std::cout << std::setw(4) << std::left << student.get_grade();
+            std::cout << '\n';
+        }
+    }
+    void load_student_file(const std::string &file_name)
+    {
+        //  this open the file
+        std::ifstream fin(file_name);
+        std::string first;
+        std::string last;
+        int id;
+        float gpa;
+
+        while (fin >> first)
+        {
+            fin >> last >> id >> gpa;
+            add_student(Student(first, last, id, gpa));
         }
     }
 };
@@ -111,10 +135,10 @@ public:
 int main(int argc, char *argv[])
 {
     // set class with args
-    Student Yang("Jesse", "Yang", 6250, 3.5);
-    Student Jiang("Chloe", "Jiang", 9527, 3.8);
-    Student Lucky("Lucky", "Meow", 1007, 2.8);
-    const Student Sushi("Sushi", "Meow", 1522, 2.0);
+    Student Yang("Jesse", "Yang", 625012, 3.5);
+    Student Jiang("Chloe", "Jiang", 952756, 3.8);
+    Student Lucky("Lucky", "Meow", 100778, 2.8);
+    const Student Sushi("Sushi", "Meow", 152265, 2.0);
 
     // call those funcs in the class
     Jiang.print();
@@ -166,6 +190,23 @@ int main(int argc, char *argv[])
 
     std::string prof_lee = cpp.get_prof();
     std::cout << "CPP prof name is " << prof_lee << '\n';
+    std::cout << '\n';
+
+    cpp.add_student(Lucky);
+    cpp.add_student(Jiang);
+    cpp.add_student(Sushi);
+    Calculus.add_student(Yang);
+    Calculus.add_student(Lucky);
+    
+    // here i added one "temp" student, it will be showing in the course list,
+    // but it's not gonna be a var in Student class.
+    Calculus.add_student(Student("Davi", "Lee", 265566, 3.5));
+    Calculus.load_student_file("student_list.txt");
+
+    cpp.print_student_list();
+    std::cout << '\n';
+    Calculus.print_student_list();
+    std::cout << '\n';
 
     return 0;
 }
