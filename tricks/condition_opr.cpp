@@ -12,7 +12,7 @@ int main()
     // ****************************************************************************
     // *    Formate : condition statement ? execution(true) : execution(false).   *
     // ****************************************************************************
-    
+
     // example:
     int a = 10;
     int b = 20;
@@ -20,6 +20,9 @@ int main()
     // When we define a var, we can use this trick to set a condition before defined the var. 
     std::string result = (a == b) ? "True!" : "False!";
     std::cout << result << '\n';
+
+    // or like this, but make sure put entire statement in () 
+    std::cout <<((a > b) ? "No way! \n" : "hell yeah! \n");
 
     return 0;
 }
