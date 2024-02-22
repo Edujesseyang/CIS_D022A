@@ -15,8 +15,6 @@ int main()
     int b = 240;
     std::cout << (b >> 4) << '\n';
 
-
-
     return 0;
 }
 

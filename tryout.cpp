@@ -6,6 +6,6 @@ int main()
 	std::cout << static_cast<int>(a) << '\n';
 	
 
-	std::cout << (a << 4);
+	std::cout << (5 ^ 4);
 	return 0;
 }
