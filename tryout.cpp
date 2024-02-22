@@ -1,15 +1,11 @@
 #include <iostream>
-
-using namespace std;
-int add(int i)
+int main()
 {
-	return i + 1;
-}
+	int a = 15;
 
-int main(int argc, char *argv[])
-{
-	char i = '1' + '2' + '3';
-	cout << i;
+	std::cout << static_cast<int>(a) << '\n';
+	
 
+	std::cout << (a << 4);
 	return 0;
 }
