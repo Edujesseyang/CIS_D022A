@@ -19,8 +19,6 @@ void ascii_print()
     {
         std::cout << static_cast<char>(i - 1) << ' ';
         if (i % 16 == 0)
-        {
             std::cout << '\n';
-        }
     }
 }
