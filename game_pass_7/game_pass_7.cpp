@@ -6,13 +6,13 @@ int get_user_input();
 int get_rand();
 int main()
 {
+    // intro
     std::cout << "Welcome to play Pass-number game.\n";
     std::cout << "You will select a integer number between 3, 7, and 9.\n";
     std::cout << "You and the computer need to count numbers one by one, starting from a random number.\n";
     std::cout << "If the number you need to count can be divided by selected number or has a the selected number in its ones place, you then need to enter 0 instead.\n";
     std::cout << "Computer will put a 'pass' in the front of the number if that case happened to it.\n";
     std::cout << "You lose if you miss counting.\n";
-
     char ready_check;
     std::cout << "Are you ready? (y/n)";
     std::cin >> ready_check;
