@@ -4,14 +4,15 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.exe",
+            "program": "C:\\Users\\jcjcr\\OneDrive\\desktop\\code\\CIS_D022A\\loop\\goto.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "C:\\Users\\jcjcr\\OneDrive\\desktop\\code\\CIS_D022A\\loop",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
