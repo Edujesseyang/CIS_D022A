@@ -1,11 +1,10 @@
 #include <iostream>
 int main()
 {
-	int a = 15;
+	char a[4];
 
-	std::cout << static_cast<int>(a) << '\n';
-	
+	std::cout << a << '\n';
+	std::cout << "a" << '\n';
 
-	std::cout << (5 ^ 4);
 	return 0;
 }
