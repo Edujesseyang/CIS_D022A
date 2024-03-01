@@ -1,10 +1,17 @@
 #include <iostream>
+
+int num, num1;
+int sum = func2(num, num1);
+
+
 int main()
 {
-	char a[4];
-
-	std::cout << a << '\n';
-	std::cout << "a" << '\n';
-
+	int a = func2();
+	
 	return 0;
+}
+
+int func2(num, num1)
+{
+	std::cout << "work";
 }
