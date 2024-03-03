@@ -6,10 +6,14 @@ using namespace std;
 int main()
 {
     int a = 50;
-    int b = 100;
-    int total = a + b;
-    cout << "Total of 50 and 100 is " << total << "." << endl;
-    return 0;
+    int b =
+        100;
+    int
+        total = a + b;
+    cout << "Total of 5
+            0 and
+        100 is " << total << "." << endl;
+        return 0;
 }
 
 // Optional bonus
