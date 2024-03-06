@@ -78,11 +78,12 @@ int main()
         std::cout << "str_2 is longer\n";
     }
 
-    // c style string
-    char string_1[] = {'a', 'b', 'c', 'd', 'e'};
-    for(char c : string_1)
-        std::cout << c << '\t';
-    std::cout << '\n';
+    // c style string, the end iterm has to be '\0'
+    char string_1[] = {'a', 'b', 'c', 'd', 'e', '\0'};
+    char string_2[] = "what's up";        // there is '\0' auto add to the end
+    std::cout << sizeof string_2 << '\n'; 
+    std::cout << string_1 << '\n';
+    std::cout << string_2 << '\n';
 
     return 0;
 }
