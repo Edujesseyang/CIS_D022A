@@ -50,11 +50,11 @@ int main()
         float avg_grade = findGradeAvg(grades, numOfGrades);
 
         cout << first_name << " " << last_name;
-        cout << "has an average grade is : " << avg_grade << '\n';
+        cout << "has an average of " << avg_grade;
 
         // Fill in call to get and print letter grade of student to screen
         char letter_grade = findLetterGrade(avg_grade);
-        cout << "This student will receive \"" << letter_grade << "\" for this course.\n";
+        cout << "which give the letter grade of \"" << letter_grade << "\"\n";
 
         cout << "\n\n\n\n";
         cout << "Please input a y if you want to input more students"
