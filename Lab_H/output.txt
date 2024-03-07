@@ -1,0 +1,4 @@
+The smallest number is: -265.
+The largest number is: 3424.
+The total of all numbers is: 5113.
+The average value of all number is: 150.
