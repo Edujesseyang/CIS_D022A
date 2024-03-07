@@ -21,7 +21,7 @@ int main()
     int const SIZE = data_vec.size();
 
     // list all items 
-    std::cout << "List data:\n";
+    std::cout << "List Data:\n";
     for (size_t i = 0; i < SIZE; i++)
     {
         std::cout << data_vec[i] << ' ';
@@ -35,6 +35,7 @@ int main()
     int avg = find_avg(data_vec);
 
     // output analysis report to screen.
+    std::cout << "Analysis Report:\n";
     std::cout << "The smallest number is: " << min << ".\n";
     std::cout << "The largest number is: " << max << ".\n";
     std::cout << "The total of all numbers is: " << sum << ".\n";
@@ -59,6 +60,10 @@ std::vector<int> file_to_vector(std::string file_name)
         {
             result.push_back(temp);
         }
+    }
+    else
+    {
+        std::cout << "File not found.\n";
     }
     file_in.close();
     return result;
@@ -120,10 +125,15 @@ void report_output(std::string file_name, int min, int max, int sum, int avg)
     file_out.open(file_name);
     if(file_out)
     {
+        file_out << "Analysis Report:\n";
         file_out << "The smallest number is: " << min << ".\n";
         file_out << "The largest number is: " << max << ".\n";
         file_out << "The total of all numbers is: " << sum << ".\n";
         file_out << "The average value of all number is: " << avg << ".\n";
+    }
+    else
+    {
+        std::cout << "File not found.\n";
     }
     file_out.close();
 }
