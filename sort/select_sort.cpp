@@ -9,7 +9,7 @@ int main()
     // we want the outside loop swap min and the arr[i] every time i++;
     for (size_t i = 0; i < size; i++)
     {
-        int min = 10000;    // set a compare variable bigger than all int
+        int min = arr[0];    // set a compare variable bigger than all int
         int temp = 0;       // set a temp var for swap use
         int index = 0;      // set a temp index to record the index of smallest num in arr
 
