@@ -29,8 +29,11 @@ int main()
     print_info(student);
     print_info(student_2);
 
-    for (size_t i = 0; i < 4; i++)
-        print_info(student_group[i]);
+    for(StudentInfo student : student_group)
+        print_info(student);
+    // or
+    // for (size_t i = 0; i < 4; i++)
+    //     print_info(student_group[i]);
 
     return 0;
 }
