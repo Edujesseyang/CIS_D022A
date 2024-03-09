@@ -1,19 +1,16 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
+            "type": "shell",
             "label": "C/C++: g++.exe build active file",
             "command": "C:\\Coding\\MinGW\\bin\\g++.exe",
             "args": [
-                "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
-            "options": {
-                "cwd": "C:\\Users\\jcjcr\\OneDrive\\desktop\\code"
-            },
+            
             "problemMatcher": [
                 "$gcc"
             ],

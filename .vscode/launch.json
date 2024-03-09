@@ -12,7 +12,6 @@
             "program": "C:\\Coding\\MinGW\\bin\\gdb.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "C:\\Users\\jcjcr\\OneDrive\\desktop\\code\\CIS_D022A",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
