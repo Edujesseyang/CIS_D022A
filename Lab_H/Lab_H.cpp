@@ -10,7 +10,7 @@ std::vector<int> file_to_vector(std::string file_name);
 int find_smallest_int(std::vector<int> vec);
 int find_largest_int(std::vector<int> vec);
 int find_total(std::vector<int> vec);
-int find_avg(std::vector<int> vec);
+float find_avg(std::vector<int> vec);
 void report_output(std::string file_name, int min, int max, int sum, int avg);
 
 int main()
@@ -32,7 +32,7 @@ int main()
     int min = find_smallest_int(data_vec);
     int max = find_largest_int(data_vec);
     int sum = find_total(data_vec);
-    int avg = find_avg(data_vec);
+    float avg = find_avg(data_vec);
 
     // output analysis report to screen.
     std::cout << "Analysis Report:\n";
@@ -108,15 +108,21 @@ int find_total(std::vector<int> vec)
     return total;
 }
 
-int find_avg(std::vector<int> vec)
+float find_avg(std::vector<int> vec)
 {
     int size = vec.size();
-    int total = 0;
+    float total = 0.0;
+    float avg;
     for (size_t i = 0; i < size; i++)
     {
         total += vec[i];      
     }
-    return total / size;
+    if (size > 0)
+    {
+        avg = total / size;
+    }
+
+     return avg;
 }
 
 void report_output(std::string file_name, int min, int max, int sum, int avg)

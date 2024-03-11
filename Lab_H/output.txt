@@ -1,3 +1,4 @@
+Analysis Report:
 The smallest number is: -265.
 The largest number is: 3424.
 The total of all numbers is: 5113.
