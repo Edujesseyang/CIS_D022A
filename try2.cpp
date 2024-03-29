@@ -11,7 +11,10 @@ int main() {
 	for (int num : arr)
         std::cout << num << ' ' ;  // If we print all elements, the if will be "100 2 3".
 
-
+    std::cout << '\n';
+    std::cout << "arr[1]= " << *(ptr_arr + 1) << std::endl;
+    *(ptr_arr + 1) = 14;
+    std::cout << "arr[1]= " << *(ptr_arr + 1) << std::endl;
 
 
     return 0;
